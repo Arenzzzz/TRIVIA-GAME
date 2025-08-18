@@ -49,3 +49,10 @@ preguntas = [
 class Validaciones:
     def __init__(self, dato):
         self.dato = dato
+
+    # Métodos de validación de espacios vacíos
+    def espacios_vacios(self):
+        if not self.dato.strip():
+            print('ERROR: Espacio en blanco')
+            return False
+        return True
