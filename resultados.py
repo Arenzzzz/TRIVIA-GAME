@@ -4,8 +4,9 @@
 
 def guardar_puntaje(nombre, puntaje):
     try:
-        print(f"{'Nombre':<10} | {'Puntaje'}")
-        print("-" * 22)
-        pass
+        with open("puntajes.txt", "a") as archivo:
+            print(f"{'Nombre':<10} | {'Puntaje'}")
+            print("-" * 22)
+            print(f"{nombre:<10} | {puntaje}", file=archivo)
     except Exception as e:
         print(f"Error existente al guardar el puntaje: {e}")
