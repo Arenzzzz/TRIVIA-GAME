@@ -4,7 +4,7 @@ Estudiantes:
 	DE LEÓN GONZÁLEZ ALEJANDRO DANIEL-1502425
 	VELÁSQUEZ GONZÁLEZ LUIS MANUEL-1502325
  	PELAEZ VIRULA MOSHÉ ARENZ-1556425
-  CHOLOTÍO MENDOZA CARLOS ANDRÉS-1517925
+  	CHOLOTÍO MENDOZA CARLOS ANDRÉS-1517925
 
 Descripción:
 Este proyecto consiste en el desarrollo de un juego de trivia en consola, donde los jugadores responden preguntas de selección múltiple clasificadas por nivel de dificultad.
@@ -58,3 +58,25 @@ Imprime un resumen de confirmación con el nivel, enunciado, respuesta correcta 
 Contribución al crecimiento dinámico del juego:
 Gracias a esta implementación, el juego no queda limitado a las preguntas predefinidas.
 Los jugadores o futuros curadores pueden seguir alimentando la trivia con nuevas preguntas, manteniendo la dificultad organizada.
+
+
+Gestor de puntajes (Alejandro de León – 1502425)
+
+Rol oficial: Implementar la funcionalidad de registro y consulta de puntajes del juego, asegurando que los resultados de los jugadores queden guardados de manera persistente.
+
+Aportaciones concretas al proyecto:
+Función guardar_puntaje(nombre, puntaje)
+	Permite registrar el puntaje de un jugador en un archivo llamado puntajes.txt.
+	Usa el modo "a" (append) para añadir resultados sin sobrescribir los puntajes anteriores.
+	Formatea la salida para que sea legible, con columnas de nombre y puntaje.
+	Manejo de errores con try-except para capturar problemas al abrir o escribir el archivo.
+
+Función mostrar_historial()
+	Lee el archivo puntajes.txt y muestra todos los puntajes previamente registrados.
+	Controla los casos donde el archivo no existe o está vacío, mostrando mensajes claros al usuario.
+	Implementa manejo de excepciones para evitar que errores de lectura interrumpan el juego.
+
+Contribución al flujo del juego:
+	Estas funciones permiten que el juego tenga un registro histórico de resultados, fomentando la competitividad y seguimiento del rendimiento.
+	Se integra con la función jugar() del módulo principal para que, al finalizar la partida, el puntaje del jugador se guarde automáticamente.
+	Proporciona una opción en el menú principal para que cualquier jugador consulte los puntajes históricos en cualquier momento.
