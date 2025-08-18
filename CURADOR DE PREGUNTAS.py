@@ -135,3 +135,5 @@ def agregar_preguntas():
     for tipo in preguntas:
         if dificultad in tipo:
             tipo[dificultad].append(question)
+
+agregar_preguntas()
