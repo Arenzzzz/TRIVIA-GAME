@@ -1,3 +1,26 @@
+Nombre del proyecto:Propuesta 3: Juego de Trivia con Puntajes 
+
+Estudiantes:
+	DE LEÓN GONZÁLEZ ALEJANDRO DANIEL-1502425
+	VELÁSQUEZ GONZÁLEZ LUIS MANUEL-1502325
+ 	PELAEZ VIRULA MOSHÉ ARENZ-1556425
+  CHOLOTÍO MENDOZA CARLOS ANDRÉS-1517925
+
+Descripción:
+Este proyecto consiste en el desarrollo de un juego de trivia en consola, donde los jugadores responden preguntas de selección múltiple clasificadas por nivel de dificultad.
+
+El sistema asigna puntajes según la dificultad de cada pregunta y ofrece una ronda extra opcional con la que el jugador puede ganar más puntos o perderlos si falla.
+
+Además, el juego permite:
+  Registrar nuevas preguntas en la base de datos de manera dinámica.
+  Validar entradas para evitar errores en las respuestas y registros.
+  Guardar puntajes históricos en un archivo para que los jugadores consulten resultados    anteriores.
+
+El proyecto está organizado en roles de equipo (curador de preguntas, desarrollador de juego, pruebas y errores, documentación) para fomentar el trabajo colaborativo, el uso de GitHub y las buenas prácticas de programación en Python.
+
+instrucciones de uso:
+
+Roles de los Integrantes:
 Curador de preguntas (Arenz Peláez – 1556425)
 
 Rol oficial: Diseñar, mantener y validar la base de datos de preguntas de la trivia.
