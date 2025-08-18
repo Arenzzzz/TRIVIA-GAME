@@ -135,7 +135,10 @@ def agregar_preguntas():
     for tipo in preguntas:
         if dificultad in tipo:
             tipo[dificultad].append(question)
+<<<<<<< HEAD
             print(f'\n✔️ PREGUNTA REGISTRADA')
             print(f'\tNivel de dificultad: {dificultad} \n\tPregunta: {pregunta} \n\tRespuesta: {respuesta} \n\tOpciones {opciones}')
+=======
+>>>>>>> 589d75786a530a813a60b87841cbfa2478262a1d
 
 agregar_preguntas()
