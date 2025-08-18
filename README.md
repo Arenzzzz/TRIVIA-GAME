@@ -95,11 +95,7 @@ El trabajo se organizó con roles de equipo para fomentar la colaboración, el u
 ## Conclusión
 
 Este proyecto cumple con los requisitos de un juego funcional de trivia y fomenta:
-
 * Trabajo colaborativo.
 * Uso correcto de GitHub (commits, ramas, issues, documentación).
 * Aplicación de estructuras de programación en Python (condicionales, ciclos, manejo de excepciones).
 
--
-
-Si quieres, puedo también prepararte un **apartado de “Ejemplo de ejecución”** para agregar al final y que tu README se vea más completo. ¿Quieres que lo haga?
