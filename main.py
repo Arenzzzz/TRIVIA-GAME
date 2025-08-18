@@ -13,7 +13,7 @@ def mostrar_pregunta(dificultad):
     print(pregunta)
     for i in range(1,5):
         print(f"{i}. {opciones[i-1]}")
-    return respuesta
+    return InfoPregunta
 
 #Función para verificar la respuesta
 def verificar_respuesta(infoPregunta):

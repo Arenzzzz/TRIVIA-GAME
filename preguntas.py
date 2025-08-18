@@ -137,4 +137,4 @@ def agregar_preguntas():
         print(f'\n✔️ PREGUNTA REGISTRADA')
         print(f'\tNivel de dificultad: {dificultad} \n\tPregunta: {pregunta} \n\tRespuesta: {respuesta} \n\tOpciones {opciones}')
 
-agregar_preguntas()
+#agregar_preguntas()
