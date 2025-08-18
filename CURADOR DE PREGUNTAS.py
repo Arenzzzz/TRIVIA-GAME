@@ -87,3 +87,19 @@ def agregar_preguntas():
                 break
             else:
                 print('ERROR: Nivel de dificultad inválido, intente de nuevo')
+    
+    # Bucle para validar entrada de pregunta
+    while True:
+        pregunta = input('Pregunta: ').capitalize().strip()
+        
+        # Verificación de espacios en blanco
+        Validacion = Validaciones(pregunta)
+        if Validacion.espacios_vacios():
+            # Añadido de signos (¿?) si no se ingresan
+            if not pregunta.startswith('¿'):
+                pregunta = '¿' + pregunta
+            if not pregunta.endswith('?'):
+                pregunta = pregunta + '?'
+            break
+    
+    
