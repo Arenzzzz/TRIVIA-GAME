@@ -102,4 +102,11 @@ def agregar_preguntas():
                 pregunta = pregunta + '?'
             break
     
+    # Bucle para validar el ingreso de respueta
+    while True:
+        respuesta = input('Respuesta: ')
+        # Valida que se hayan ingresado datos
+        if Validaciones(respuesta).espacios_vacios():
+            break
+    
     
