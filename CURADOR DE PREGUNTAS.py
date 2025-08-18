@@ -44,3 +44,8 @@ preguntas = [
         {'¿Cuál es el metal más ligero de todos?':{'Respuesta':'Litio', 'Opciones':['Aluminio', 'Magnesio', 'Litio', 'Titanio']}}
         ]}
 ]
+
+# Clase para validar entradas de datos
+class Validaciones:
+    def __init__(self, dato):
+        self.dato = dato
