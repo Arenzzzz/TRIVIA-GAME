@@ -4,6 +4,8 @@
 
 def guardar_puntaje(nombre, puntaje):
     try:
+        print(f"{'Nombre':<10} | {'Puntaje'}")
+        print("-" * 22)
         pass
     except Exception as e:
         print(f"Error existente al guardar el puntaje: {e}")
