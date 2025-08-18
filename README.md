@@ -1,82 +1,105 @@
-Nombre del proyecto:Propuesta 3: Juego de Trivia con Puntajes 
 
-Estudiantes:
-	DE LEÓN GONZÁLEZ ALEJANDRO DANIEL-1502425
-	VELÁSQUEZ GONZÁLEZ LUIS MANUEL-1502325
- 	PELAEZ VIRULA MOSHÉ ARENZ-1556425
-  	CHOLOTÍO MENDOZA CARLOS ANDRÉS-1517925
+# Proyecto: Propuesta 3 - Juego de Trivia con Puntajes
 
-Descripción:
+## Estudiantes
+
+* De León González Alejandro Daniel – 1502425
+* Velásquez González Luis Manuel – 1502325
+* Pelaez Virula Moshé Arenz – 1556425
+* Cholotío Mendoza Carlos Andrés – 1517925
+
+## Descripción
+
 Este proyecto consiste en el desarrollo de un juego de trivia en consola, donde los jugadores responden preguntas de selección múltiple clasificadas por nivel de dificultad.
 
-El sistema asigna puntajes según la dificultad de cada pregunta y ofrece una ronda extra opcional con la que el jugador puede ganar más puntos o perderlos si falla.
+El sistema:
 
-Además, el juego permite:
-  Registrar nuevas preguntas en la base de datos de manera dinámica.
-  Validar entradas para evitar errores en las respuestas y registros.
-  Guardar puntajes históricos en un archivo para que los jugadores consulten resultados    anteriores.
+* Asigna puntajes según la dificultad de cada pregunta.
+* Ofrece una ronda extra opcional para ganar más puntos o perderlos si se falla.
+* Permite registrar nuevas preguntas dinámicamente.
+* Valida entradas para evitar errores en respuestas y registros.
+* Guarda un historial de puntajes en un archivo para consulta posterior.
 
-El proyecto está organizado en roles de equipo (curador de preguntas, desarrollador de juego, pruebas y errores, documentación) para fomentar el trabajo colaborativo, el uso de GitHub y las buenas prácticas de programación en Python.
-
-instrucciones de uso:
-
-Roles de los Integrantes:
-Curador de preguntas (Arenz Peláez – 1556425)
-
-Rol oficial: Diseñar, mantener y validar la base de datos de preguntas de la trivia.
-
-Aportaciones concretas al proyecto:
-Diseño de la estructura de datos:
-Creó un diccionario de Python llamado preguntas que organiza las preguntas en distintos niveles de dificultad: FÁCIL, MEDIA, DIFÍCIL y EXTRAS.
-Cada nivel contiene una lista de diccionarios individuales, con claves:
-"Pregunta" → el enunciado.
-"Respuesta" → la respuesta correcta.
-"Opciones" → lista de cuatro posibles respuestas (una correcta y tres distractores).
-Se aseguraron mínimo 10 preguntas por nivel principal para cumplir con los requisitos del proyecto.
-
-Clasificación de preguntas:
-Preguntas fáciles → conocimientos generales y cotidianos.
-Preguntas medias → cultura general e historia.
-Preguntas difíciles → matemáticas, ciencia y cultura más avanzada.
-Preguntas extras → para la ronda de riesgo/recompensa, que suman o restan puntos.
-
-Validación de entradas con la clase Validaciones:
-Implementó una clase auxiliar para controlar la calidad de los datos ingresados cuando se agregan nuevas preguntas.
-Métodos principales:
-  espacios_vacios() → evita preguntas o respuestas en blanco.
-  entrada_numerica() → asegura que la dificultad y opciones se seleccionen con números válidos.
-  
-Función agregar_preguntas():
-Permite que el usuario registre nuevas preguntas dentro de la trivia.
-Controla el flujo de:
-  Selección del nivel de dificultad.
-  Validación y normalización del texto de la pregunta (añadiendo signos de interrogación).
-  Confirmación de que la respuesta correcta está incluida entre las opciones ingresadas.
-Una vez validada, la pregunta se agrega al diccionario global preguntas.
-Imprime un resumen de confirmación con el nivel, enunciado, respuesta correcta y opciones.
-
-Contribución al crecimiento dinámico del juego:
-Gracias a esta implementación, el juego no queda limitado a las preguntas predefinidas.
-Los jugadores o futuros curadores pueden seguir alimentando la trivia con nuevas preguntas, manteniendo la dificultad organizada.
+El trabajo se organizó con roles de equipo para fomentar la colaboración, el uso de GitHub y las buenas prácticas de programación en Python.
 
 
-Gestor de puntajes (Alejandro de León – 1502425)
+## Instrucciones de uso
 
-Rol oficial: Implementar la funcionalidad de registro y consulta de puntajes del juego, asegurando que los resultados de los jugadores queden guardados de manera persistente.
+1. Clonar el repositorio
 
-Aportaciones concretas al proyecto:
-Función guardar_puntaje(nombre, puntaje)
-	Permite registrar el puntaje de un jugador en un archivo llamado puntajes.txt.
-	Usa el modo "a" (append) para añadir resultados sin sobrescribir los puntajes anteriores.
-	Formatea la salida para que sea legible, con columnas de nombre y puntaje.
-	Manejo de errores con try-except para capturar problemas al abrir o escribir el archivo.
+   ```
+   git clone https://github.com/Arenzzzz/TRIVIA-GAME.git
+   cd TRIVIA-GAME
+   ```
 
-Función mostrar_historial()
-	Lee el archivo puntajes.txt y muestra todos los puntajes previamente registrados.
-	Controla los casos donde el archivo no existe o está vacío, mostrando mensajes claros al usuario.
-	Implementa manejo de excepciones para evitar que errores de lectura interrumpan el juego.
+2. Ejecutar el juego
+   Asegúrate de tener Python instalado y ejecuta:
 
-Contribución al flujo del juego:
-	Estas funciones permiten que el juego tenga un registro histórico de resultados, fomentando la competitividad y seguimiento del rendimiento.
-	Se integra con la función jugar() del módulo principal para que, al finalizar la partida, el puntaje del jugador se guarde automáticamente.
-	Proporciona una opción en el menú principal para que cualquier jugador consulte los puntajes históricos en cualquier momento.
+   ```
+   python main.py
+   ```
+
+3. Menú principal
+   Al iniciar el programa, se mostrará un menú con opciones:
+
+   * `1) Jugar` → Inicia una partida de trivia.
+   * `2) Ver puntajes` → Muestra el historial de puntajes guardados en `puntajes.txt`.
+   * `3) Agregar preguntas` → Permite ingresar nuevas preguntas al juego.
+   * `4) Salir` → Cierra el programa.
+
+4. Durante el juego
+
+   * Ingresa tu nombre para comenzar.
+   * Responde las preguntas seleccionando un número entre 1 y 4.
+   * Al final de la partida, tu puntaje será guardado automáticamente.
+
+5. Historial de puntajes
+
+   * Todos los resultados se almacenan en el archivo `puntajes.txt`.
+   * Puedes consultarlos desde la opción `2) Ver puntajes`.
+
+
+## Roles de los Integrantes
+
+### Curador de preguntas
+**Arenz Peláez – 1556425**
+
+* Diseñó y mantuvo la base de datos de preguntas.
+* Clasificación por niveles: FÁCIL, MEDIA, DIFÍCIL y EXTRA.
+* Implementó la clase **Validaciones** para asegurar la calidad de las preguntas nuevas.
+* Función **agregar\_preguntas()** que permite registrar dinámicamente nuevas preguntas.
+* Permite que el juego crezca con nuevas preguntas, manteniendo la dificultad organizada.
+
+### Gestor de puntajes
+**Alejandro de León – 1502425**
+
+* Función **guardar\_puntaje(nombre, puntaje)** para almacenar resultados en `puntajes.txt`.
+* Función **mostrar\_historial()** que lee y muestra todos los puntajes guardados.
+* Manejo de errores con **try-except** para evitar fallos en lectura o escritura.
+* Integración con el flujo del juego para registrar puntajes automáticamente al finalizar.
+
+### Flujo general del programa
+**Luis Manuel Velásquez – 1502325**
+
+* Implementó el flujo principal del juego y la interacción con el usuario.
+* Función **jugar()** que coordina la secuencia de preguntas según la dificultad y controla la ronda extra opcional.
+* Función **mostrar\_pregunta(dificultad)** que selecciona aleatoriamente una pregunta de la base de datos y muestra sus opciones.
+* Función **verificar\_respuesta(infoPregunta)** que valida la respuesta del jugador, asegurando entradas numéricas válidas y controlando errores.
+* Función **agregar\_puntaje(dificultad, validez, puntaje)** que calcula y actualiza el puntaje de acuerdo a la dificultad y el resultado de la pregunta, incluyendo penalización para preguntas extras incorrectas.
+* Creación del **menú principal**, permitiendo a los jugadores elegir entre jugar, ver puntajes, agregar preguntas o salir del programa.
+* Integración con los módulos de **preguntas** y **resultados**, asegurando que las preguntas y los puntajes se gestionen correctamente.
+
+
+
+
+## Conclusión
+
+Este proyecto cumple con los requisitos de un juego funcional de trivia y fomenta:
+
+* Trabajo colaborativo.
+* Uso correcto de GitHub (commits, ramas, issues, documentación).
+* Aplicación de estructuras de programación en Python (condicionales, ciclos, manejo de excepciones).
+
+-
+
+Si quieres, puedo también prepararte un **apartado de “Ejemplo de ejecución”** para agregar al final y que tu README se vea más completo. ¿Quieres que lo haga?
