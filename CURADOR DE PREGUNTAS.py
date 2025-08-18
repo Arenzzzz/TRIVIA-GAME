@@ -26,6 +26,17 @@ preguntas = [
         {'¿Qué elemento tiene el símbolo "O"?':{'Respuesta':'Oxígeno', 'Opciones':['Oro', 'Oxígeno', 'Plata', 'Ozono']}},
         {'¿Cuál es la raíz cuadrada de 144?':{'Respuesta':'12', 'Opciones':['10', '12', '14', '16']}}
         ]},
-    {'DIFÍCIL':[]},
+    {'DIFÍCIL':[
+        {'¿Cuál es la derivada de x^2?':{'Respuesta':'x', 'Opciones':['x', '2x', 'x^2', '2']}},
+        {'¿Qué elemento tiene número atómico 79?':{'Respuesta':'Oro', 'Opciones':['Oro', 'Plata', 'Plomo', 'Mercurio']}},
+        {'¿Cuál es el valor de π hasta 2 decimales?':{'Respuesta':'3.14', 'Opciones':['3.12', '3.14', '3.15', '3.13']}},
+        {'¿Qué teorema relaciona los catetos y la hipotenusa?':{'Respuesta':'Pitágoras', 'Opciones':['Pitágoras', 'Newton', 'Euclides', 'Tales']}},
+        {'¿Quién formuló la teoría de la relatividad?':{'Respuesta':'Einstein', 'Opciones':['Newton', 'Einstein', 'Galileo', 'Tesla']}},
+        {'¿Cuál es la integral de 2x dx?':{'Respuesta':'x^2 + C', 'Opciones':['x^2 + C', '2x^2 + C', 'x + C', 'x^2/2 + C']}},
+        {'¿Qué país tiene la mayor densidad de población?':{'Respuesta':'Mónaco', 'Opciones':['Mónaco', 'India', 'China', 'Singapur']}},
+        {'¿Cuál es la capital de Islandia?':{'Respuesta':'Reikiavik', 'Opciones':['Oslo', 'Reikiavik', 'Helsinki', 'Copenhague']}},
+        {'¿Qué órgano produce la insulina?':{'Respuesta':'Páncreas', 'Opciones':['Hígado', 'Páncreas', 'Riñón', 'Corazón']}},
+        {'¿Qué lenguaje se usa para programar páginas web?':{'Respuesta':'HTML', 'Opciones':['Python', 'HTML', 'C++', 'Java']}}
+        ]},
     {'EXTRA':[]}
 ]
