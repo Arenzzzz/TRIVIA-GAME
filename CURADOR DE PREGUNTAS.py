@@ -63,3 +63,7 @@ class Validaciones:
             print('ERROR: Entrada no numérica')
             return False
         return True
+
+# Función para agregar preguntas al registro
+def agregar_preguntas():
+    print('-' * 50); print('AGREGA TU PREGUNTA')
