@@ -109,4 +109,19 @@ def agregar_preguntas():
         if Validaciones(respuesta).espacios_vacios():
             break
     
+    # Bucle para validar opciones
+    while True:
+        i = 1   # Contador de opciones
+        opciones = []   # Lista para almacenar opciones ingresadas
+        print('Agrega 4 opciones de respuesta')
+        # Bucle para ingresar 4 opciones de respuesta
+        while i <= 4:
+            opcion = input(f'Opción {i}: ')
+            # Verificación de espacios en blanco
+            Validacion = Validaciones(opcion)
+            if Validacion.espacios_vacios():
+                # Se agregan las opciones a la lista y se aumenta el contador
+                opciones.append(opcion)
+                i += 1
+    
     
