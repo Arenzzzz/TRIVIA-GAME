@@ -56,3 +56,10 @@ class Validaciones:
             print('ERROR: Espacio en blanco')
             return False
         return True
+    
+    # Método de validación de entrada numérica (cuando se espera un número)
+    def entrada_numerica(self):
+        if not self.dato.isdigit():
+            print('ERROR: Entrada no numérica')
+            return False
+        return True
