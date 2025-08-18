@@ -17,15 +17,22 @@ def mostrar_pregunta(dificultad):
 
 #Función para verificar la respuesta
 def verificar_respuesta(infoPregunta):
-    respuesta_usuario=input("Tu respuesta en números: ")
-    respuesta_usuario=int(respuesta_usuario)
-    if 1<=respuesta_usuario<=4:
-        if infoPregunta["Respuesta"]==infoPregunta["Opciones"][respuesta_usuario-1]:
-            return True
-        else:
-            return False
-    else:
-        print ("La respuesta debe ser un número entre 1 y 4")
+    comprobacion=False
+    while comprobacion==False:
+        respuesta_usuario=input("Tu respuesta en números: ")
+        try:
+            respuesta_usuario=int(respuesta_usuario)
+            if 1<=respuesta_usuario<=4:
+                if infoPregunta["Respuesta"]==infoPregunta["Opciones"][respuesta_usuario-1]:
+                    comprobacion=True
+                    return True
+                else:
+                    comprobacion=True
+                    return False
+            else:
+                raise ValueError ("La respuesta debe ser un número entre 1 y 4")
+        except ValueError as e:
+            print("Error:", e)
 
 #función para agregar puntaje
 def agregar_puntaje(dificultad, validez):
@@ -54,6 +61,21 @@ def jugar():
         print(f"\nSe viene una pregunta {dificultad.lower()}")
         infoPregunta=mostrar_pregunta(dificultad)
         validez=verificar_respuesta(infoPregunta)
+        agregar_puntaje(dificultad, validez)
+
+    print("\nTerminaste la ronda, pero puedes seguir jugando")
+    print("Puedes responder una pregunta extra por 2 puntos más, pero si te equivocas pierdes 3 puntos de los ya ganaste")
+    pregunta_extra=input("¿Deseas la pregunta? escribe 'si' para darte la pregunta o un enter para terminar: ")
+    if pregunta_extra=="si":
+        infoPregunta=mostrar_pregunta("EXTRA")
+        validez=verificar_respuesta(infoPregunta)
+        agregar_puntaje(dificultad, validez)
+
+    print(f"\n Muy bien {nombre}")
+    print(f"Obtuviste un total de {puntaje} puntos")
+
+    #guardar datos
+    print("Guardando tus datos...")
 
 while True:
     print("\nBienvenidos a la mejor trivia del mundo")
