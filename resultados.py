@@ -12,5 +12,14 @@ def guardar_puntaje(nombre, puntaje):
         print(f"Error existente al guardar el puntaje: {e}")
 
 def mostrar_historial():
-    # Esta función mostrará todos los puntajes guardados en puntajes.txt
-    pass
+    try:
+        with open("puntajes.txt", "r") as archivo:
+            lineas = archivo.readlines()
+            if lineas:
+                print("\nHistorial de puntajes:")
+                for linea in lineas:
+                    print(f"• {linea.strip()}")
+            else:
+                print("\nAún no hay puntajes registrados")
+    except Exception as e:
+        print(f"\nError existente al leer el historial: {e}")
