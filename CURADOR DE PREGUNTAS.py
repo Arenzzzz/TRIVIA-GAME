@@ -14,7 +14,18 @@ preguntas = [
         {'¿Qué gas respiramos principalmente?':{'Respuesta':'Oxígeno', 'Opciones':['Oxígeno', 'Hidrógeno', 'Nitrógeno', 'Helio']}},
         {'¿Cuál es la marca de tecnología con una manzana por logotipo?':{'Respuesta':'Apple', 'Opciones':['Tesla', 'Microsoft', 'Facebook', 'Apple']}}
         ]},
-    {'MEDIA':[]},
+    {'MEDIA':[
+        {'¿Cuál es el símbolo químico del oro?':{'Respuesta':'Au', 'Opciones':['Au', 'Ag', 'Go', 'O']}},
+        {'¿Quién pintó la Mona Lisa?':{'Respuesta':'Da Vinci', 'Opciones':['Van Gogh', 'Picasso', 'Da Vinci', 'Rembrandt']}},
+        {'¿Qué país tiene la mayor población?':{'Respuesta':'China', 'Opciones':['India', 'China', 'EEUU', 'Indonesia']}},
+        {'¿Cuál es el océano más grande?':{'Respuesta':'Pacífico', 'Opciones':['Atlántico', 'Pacífico', 'Índico', 'Ártico']}},
+        {'¿Cuál es la fórmula del agua?':{'Respuesta':'H20', 'Opciones':['H2O', 'CO2', 'O2', 'HO']}},
+        {'¿En qué año llegó el hombre a la luna?':{'Respuesta':'1969', 'Opciones':['1965', '1969', '1972', '1960']}},
+        {'¿Quién escribió "Cien años de soledad"?':{'Respuesta':'Gabriel García Márquez', 'Opciones':['Gabriel García Márquez', 'Pablo Neruda', 'Mario Vargas Llosa', 'Julio Cortázar']}},
+        {'¿Cuál es el país más grande del mundo?':{'Respuesta':'Rusia', 'Opciones':['China', 'Estados Unidos', 'Rusia', 'Brasil']}},
+        {'¿Qué elemento tiene el símbolo "O"?':{'Respuesta':'Oxígeno', 'Opciones':['Oro', 'Oxígeno', 'Plata', 'Ozono']}},
+        {'¿Cuál es la raíz cuadrada de 144?':{'Respuesta':'12', 'Opciones':['10', '12', '14', '16']}}
+        ]},
     {'DIFÍCIL':[]},
     {'EXTRA':[]}
 ]
