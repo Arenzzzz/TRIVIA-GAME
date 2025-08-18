@@ -26,3 +26,5 @@ def mostrar_historial():
         print("\nEl archivo de puntaje no existe actualmente")
     except Exception as e:
         print(f"\nError existente al leer el historial: {e}")
+
+#Elaborado por Alejandro de León - 1502425
