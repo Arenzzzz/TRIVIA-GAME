@@ -3,6 +3,7 @@
 
 import preguntas   #Base de datos de preguntas
 import random
+import resultados       #Base de datos para el historial de puntajes
 
 #Función para mostrar una pregunta con sus opciones de forma aleatoria, guiandose por la dificultad
 def mostrar_pregunta(dificultad):
@@ -79,6 +80,7 @@ def jugar():
 
     #guardar datos
     print("Guardando tus datos...")
+    resultados.guardar_puntaje(nombre, puntaje)
 
 while True:
     print("\nBienvenidos a la mejor trivia del mundo")
@@ -93,11 +95,10 @@ while True:
         jugar()
 
     elif opcion=="2":
-        #Función para mostrar los puntajes historicos
-        pass
+        resultados.mostrar_historial()      #Función para mostrar los puntajes historicos
+        
     elif opcion =="3":
-        preguntas.agregar_preguntas()
-        #Función para agregar preguntas
+        preguntas.agregar_preguntas()       #Función para agregar preguntas
 
     elif opcion=="4":
         print("\n Gracias por usar nuestra trivia")
