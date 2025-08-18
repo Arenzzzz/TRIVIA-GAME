@@ -1,9 +1,10 @@
 #Flujo general del programa
 #A cargo de Luis Manuel carnet 1502325
 
-import preguntas_y_respuestas
+import preguntas_y_respuestas   #Base de datos de preguntas
 import random
 
+#Función para mostrar una pregunta con sus opciones de forma aleatoria, guiandose por la dificultad
 def mostrar_pregunta(dificultad):
     InfoPregunta=preguntas_y_respuestas.preguntas[dificultad][random.randint(0,(len(preguntas_y_respuestas.preguntas[dificultad])-1))]
     pregunta=InfoPregunta['Pregunta']
@@ -13,3 +14,14 @@ def mostrar_pregunta(dificultad):
     for i in range(1,5):
         print(f"{i}. {opciones[i-1]}")
     return respuesta
+
+def verificar_respuesta(infoPregunta):
+    respuesta_usuario=input("Tu respuesta en números: ")
+    respuesta_usuario=int(respuesta_usuario)
+    if 1<=respuesta_usuario<=4:
+        if infoPregunta["Respuesta"]==infoPregunta["Opciones"][respuesta_usuario-1]:
+            return True
+        else:
+            return False
+    else:
+        print ("La respuesta debe ser un número entre 1 y 4")
