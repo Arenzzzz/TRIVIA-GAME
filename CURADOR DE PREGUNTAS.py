@@ -124,4 +124,9 @@ def agregar_preguntas():
                 opciones.append(opcion)
                 i += 1
     
-    
+        # Se verifica que se haya ingresado la respuesta dentro de las opciones
+        if respuesta not in opciones:
+            print('La respuesta no se encuentra en las opciones')
+            opciones.clear()    # Se vacía la lista de opciones
+        else:
+            break
