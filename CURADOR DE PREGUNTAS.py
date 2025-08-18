@@ -131,10 +131,10 @@ def agregar_preguntas():
             break
     
     question = {'Pregunta':pregunta, 'Respuesta':respuesta, 'Opciones':opciones}
-    for tipo in preguntas:
-        if dificultad in tipo:
-            tipo[dificultad].append(question)
-            print(f'\n✔️ PREGUNTA REGISTRADA')
-            print(f'\tNivel de dificultad: {dificultad} \n\tPregunta: {pregunta} \n\tRespuesta: {respuesta} \n\tOpciones {opciones}')
+    # Verificación de que la dificultad exista en el registro
+    if dificultad in preguntas:
+        preguntas[dificultad].append(question)
+        print(f'\n✔️ PREGUNTA REGISTRADA')
+        print(f'\tNivel de dificultad: {dificultad} \n\tPregunta: {pregunta} \n\tRespuesta: {respuesta} \n\tOpciones {opciones}')
 
 agregar_preguntas()
