@@ -4,17 +4,18 @@
 
 def guardar_puntaje(nombre, puntaje):
     try:
-        with open("puntajes.txt", "a") as archivo:
+        with open("puntajes.txt", "a") as archivo: 
             print(f"{'Nombre':<10} | {'Puntaje'}")
             print("-" * 22)
-            print(f"{nombre:<10} | {puntaje}", file=archivo)
+            print(f"{nombre:<10} | {puntaje}", file=archivo) #Formato para imprimir en la terminal
     except Exception as e:
         print(f"Error existente al guardar el puntaje: {e}")
+
 
 def mostrar_historial():
     try:
         with open("puntajes.txt", "r") as archivo:
-            lineas = archivo.readlines()
+            lineas = archivo.readlines()  #lee lo que hay en el txt
             if lineas:
                 print("\nHistorial de puntajes:")
                 for linea in lineas:
