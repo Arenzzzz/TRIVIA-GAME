@@ -38,3 +38,29 @@ def agregar_puntaje(dificultad, validez):
             puntaje+=3
         elif dificultad=="EXTRA":
             puntaje+=2
+
+while True:
+    print("\nBienvenidos a la mejor trivia del mundo")
+    print("¿Qué deseas hacer?")
+    print("1) Jugar")
+    print("2) Ver puntajes")
+    print("3) Agregar preguntas")
+    print("4) Salir")
+    opcion=input("Ingresa una opción: ")
+
+    if opcion=="1":
+        #Ronda de trivia
+        pass
+    elif opcion=="2":
+        #Función para mostrar los puntajes historicos
+        pass
+    elif opcion =="3":
+        #Función para agregar preguntas
+        pass
+    elif opcion=="4":
+        print("\n Gracias por usar nuestra trivia")
+        print("Desarrollada por Alejandro, Arenz, Carlos y Manuel")
+        print("Sigue aprendiendo...")
+        break
+    else:
+        print("Opción no válida")
