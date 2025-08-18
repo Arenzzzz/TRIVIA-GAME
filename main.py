@@ -1,12 +1,12 @@
 #Flujo general del programa
 #A cargo de Luis Manuel carnet 1502325
 
-import preguntas_y_respuestas   #Base de datos de preguntas
+import preguntas   #Base de datos de preguntas
 import random
 
 #Función para mostrar una pregunta con sus opciones de forma aleatoria, guiandose por la dificultad
 def mostrar_pregunta(dificultad):
-    InfoPregunta=preguntas_y_respuestas.preguntas[dificultad][random.randint(0,(len(preguntas_y_respuestas.preguntas[dificultad])-1))]
+    InfoPregunta=preguntas.preguntas[dificultad][random.randint(0,(len(preguntas.preguntas[dificultad])-1))]
     pregunta=InfoPregunta['Pregunta']
     opciones=InfoPregunta['Opciones']
     respuesta=InfoPregunta["Respuesta"]
