@@ -3,5 +3,7 @@
 # Usaremos un archivo llamado 'puntajes.txt' para almacenar los resultados.
 
 def guardar_puntaje(nombre, puntaje):
-    # Esta función guardará el nombre y puntaje en el archivo puntajes.txt
-    pass
+    try:
+        pass
+    except Exception as e:
+        print(f"Error existente al guardar el puntaje: {e}")
