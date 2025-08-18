@@ -59,7 +59,7 @@ def jugar():
         nombre=input("Ingresa tu nombre: ").strip().title()
     print(f"\n Ahora sí, demuestra lo que sabes {nombre}")
     
-    dificultades=["FÁCIL", "MEDIA", "DÍFICIL"]
+    dificultades=["FÁCIL", "MEDIA", "DIFÍCIL"]
     for dificultad in dificultades:
         print(f"\nSe viene una pregunta {dificultad.lower()}")
         infoPregunta=mostrar_pregunta(dificultad)
