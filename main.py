@@ -57,7 +57,7 @@ def jugar():
     while nombre=="":
         print("No trates de hacer trampa, ingresa un nombre válido")
         nombre=input("Ingresa tu nombre: ").strip().title()
-    print(f"\n Ahora sí, demuestra lo que sabes {nombre}")
+    print(f"\nAhora sí, demuestra lo que sabes {nombre}")
     
     dificultades=["FÁCIL", "MEDIA", "DIFÍCIL"]
     for dificultad in dificultades:
@@ -66,13 +66,13 @@ def jugar():
         validez=verificar_respuesta(infoPregunta)
         puntaje=agregar_puntaje(dificultad,validez,puntaje)
 
-    print("\nTerminaste la ronda, pero puedes seguir jugando")
-    print("Puedes responder una pregunta extra por 2 puntos más, pero si te equivocas pierdes 3 puntos de los ya ganaste")
+    print(f"\nTerminaste la ronda con {puntaje} puntos, pero puedes seguir jugando")
+    print("Responde una pregunta extra por 2 puntos más, pero si te equivocas pierdes 3 puntos")
     pregunta_extra=input("¿Deseas la pregunta? escribe 'si' para darte la pregunta o un enter para terminar: ")
     if pregunta_extra=="si":
-        infoPregunta=mostrar_pregunta("EXTRA")
+        infoPregunta=mostrar_pregunta("EXTRAS")
         validez=verificar_respuesta(infoPregunta)
-        puntaje=agregar_puntaje("EXTRA", validez, puntaje)
+        puntaje=agregar_puntaje("EXTRAS", validez, puntaje)
 
     print(f"\n Muy bien {nombre}")
     print(f"Obtuviste un total de {puntaje} puntos")
