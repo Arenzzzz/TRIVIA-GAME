@@ -130,3 +130,5 @@ def agregar_preguntas():
             opciones.clear()    # Se vacía la lista de opciones
         else:
             break
+    
+    question = {pregunta:{'Respuesta':respuesta, 'Opciones':opciones}}
