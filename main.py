@@ -39,6 +39,22 @@ def agregar_puntaje(dificultad, validez):
         elif dificultad=="EXTRA":
             puntaje+=2
 
+def jugar():
+    print(),print("*"*50)
+    print("\n ¿Preparado para este reto?")
+    nombre=input("Primero, dinos tu nombre: ").strip().title()
+    puntaje=0
+    while nombre=="":
+        print("No trates de hacer trampa, ingresa un nombre válido")
+        nombre=input("Ingresa tu nombre: ").strip().title()
+    print(f"\n Ahora sí, demuestra lo que sabes {nombre}")
+    
+    dificultades=["FÁCIL", "MEDIA", "DÍFICIL"]
+    for dificultad in dificultades:
+        print(f"\nSe viene una pregunta {dificultad.lower()}")
+        infoPregunta=mostrar_pregunta(dificultad)
+        validez=verificar_respuesta(infoPregunta)
+
 while True:
     print("\nBienvenidos a la mejor trivia del mundo")
     print("¿Qué deseas hacer?")
@@ -49,8 +65,8 @@ while True:
     opcion=input("Ingresa una opción: ")
 
     if opcion=="1":
-        #Ronda de trivia
-        pass
+        jugar()
+
     elif opcion=="2":
         #Función para mostrar los puntajes historicos
         pass
