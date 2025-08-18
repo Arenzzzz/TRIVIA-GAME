@@ -72,10 +72,9 @@ def agregar_preguntas():
     # Bucle para validar entrada de nivel de dificultad
     while True:
         # Impresión de opciones
-        for i, tipo in enumerate(preguntas, 1):
-            for nivel in tipo:
-                niveles.append(nivel)
-                print(f'{i}) {nivel}')
+        for i, tipo in enumerate(preguntas.keys(), 1):
+            niveles.append(tipo)
+            print(f'{i}) {tipo}')
                 
         dificultad = input('Dificultad: ')
         # Verificación de espacios en blanco y que sea número
