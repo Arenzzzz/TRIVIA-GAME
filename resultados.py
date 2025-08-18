@@ -10,3 +10,7 @@ def guardar_puntaje(nombre, puntaje):
             print(f"{nombre:<10} | {puntaje}", file=archivo)
     except Exception as e:
         print(f"Error existente al guardar el puntaje: {e}")
+
+def mostrar_historial():
+    # Esta función mostrará todos los puntajes guardados en puntajes.txt
+    pass
