@@ -43,15 +43,15 @@ def agregar_puntaje(dificultad, validez, puntaje):
             puntaje+=2
         elif dificultad=="DIFÍCIL":
             puntaje+=3
-        elif dificultad=="EXTRA":
+        elif dificultad=="EXTRAS":
             puntaje+=2
-    elif validez==False and dificultad=="EXTRA":
+    elif validez==False and dificultad=="EXTRAS":
         puntaje-=3
     return puntaje
 
 def jugar():
-    print(),print("*"*50)
-    print("\n ¿Preparado para este reto?")
+    print(),print("*"*35)
+    print("¿Preparado para este reto?")
     nombre=input("Primero, dinos tu nombre: ").strip().title()
     puntaje=0
     while nombre=="":
@@ -96,8 +96,9 @@ while True:
         #Función para mostrar los puntajes historicos
         pass
     elif opcion =="3":
+        preguntas.agregar_preguntas()
         #Función para agregar preguntas
-        pass
+
     elif opcion=="4":
         print("\n Gracias por usar nuestra trivia")
         print("Desarrollada por Alejandro, Arenz, Carlos y Manuel")
