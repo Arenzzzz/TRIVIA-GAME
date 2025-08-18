@@ -38,5 +38,9 @@ preguntas = [
         {'¿Qué órgano produce la insulina?':{'Respuesta':'Páncreas', 'Opciones':['Hígado', 'Páncreas', 'Riñón', 'Corazón']}},
         {'¿Qué lenguaje se usa para programar páginas web?':{'Respuesta':'HTML', 'Opciones':['Python', 'HTML', 'C++', 'Java']}}
         ]},
-    {'EXTRA':[]}
+    {'EXTRA':[
+        {'¿Cuál es el país más pequeño del mundo?':{'Respuesta':'Ciudad del Vaticano', 'Opciones':['Mónaco', 'Ciudad del Vaticano', 'San Marino', 'Liechtenstein']}},
+        {'¿Qué planeta del sistema solar tiene el día más largo?':{'Respuesta':'Venus', 'Opciones':['Mercurio', 'Venus', 'Marte', 'Júpiter']}},
+        {'¿Cuál es el metal más ligero de todos?':{'Respuesta':'Litio', 'Opciones':['Aluminio', 'Magnesio', 'Litio', 'Titanio']}}
+        ]}
 ]
