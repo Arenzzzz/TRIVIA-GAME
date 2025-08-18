@@ -69,8 +69,21 @@ def agregar_preguntas():
     print('-' * 50); print('AGREGA TU PREGUNTA')
     niveles = []    # Lista para guardar las opciones de niveles de dificultad
 
-    # Impresión de opciones
-    for i, tipo in enumerate(preguntas, 1):
-        for nivel in tipo:
-            niveles.append(nivel)
-            print(f'{i}) {nivel}')
+    # Bucle para validar entrada de nivel de dificultad
+    while True:
+        # Impresión de opciones
+        for i, tipo in enumerate(preguntas, 1):
+            for nivel in tipo:
+                niveles.append(nivel)
+                print(f'{i}) {nivel}')
+                
+        dificultad = input('Dificultad: ')
+        # Verificación de espacios en blanco y que sea número
+        Validacion = Validaciones(dificultad)
+        if Validacion.espacios_vacios() and Validacion.entrada_numerica():
+            if 0 < int(dificultad) < len(niveles):
+                # Se convierte la opcion de dificultad a texto
+                dificultad = niveles[int(dificultad)-1]
+                break
+            else:
+                print('ERROR: Nivel de dificultad inválido, intente de nuevo')
