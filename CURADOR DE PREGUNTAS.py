@@ -67,3 +67,10 @@ class Validaciones:
 # Función para agregar preguntas al registro
 def agregar_preguntas():
     print('-' * 50); print('AGREGA TU PREGUNTA')
+    niveles = []    # Lista para guardar las opciones de niveles de dificultad
+
+    # Impresión de opciones
+    for i, tipo in enumerate(preguntas, 1):
+        for nivel in tipo:
+            niveles.append(nivel)
+            print(f'{i}) {nivel}')
