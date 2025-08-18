@@ -35,7 +35,7 @@ def verificar_respuesta(infoPregunta):
             print("Error:", e)
 
 #función para agregar puntaje
-def agregar_puntaje(dificultad, validez):
+def agregar_puntaje(dificultad, validez, puntaje):
     if validez:
         if dificultad=="FÁCIL":
             puntaje+=1
@@ -45,6 +45,9 @@ def agregar_puntaje(dificultad, validez):
             puntaje+=3
         elif dificultad=="EXTRA":
             puntaje+=2
+    elif validez==False and dificultad=="EXTRA":
+        puntaje-=3
+    return puntaje
 
 def jugar():
     print(),print("*"*50)
@@ -61,7 +64,7 @@ def jugar():
         print(f"\nSe viene una pregunta {dificultad.lower()}")
         infoPregunta=mostrar_pregunta(dificultad)
         validez=verificar_respuesta(infoPregunta)
-        agregar_puntaje(dificultad, validez)
+        puntaje=agregar_puntaje(dificultad,validez,puntaje)
 
     print("\nTerminaste la ronda, pero puedes seguir jugando")
     print("Puedes responder una pregunta extra por 2 puntos más, pero si te equivocas pierdes 3 puntos de los ya ganaste")
@@ -69,7 +72,7 @@ def jugar():
     if pregunta_extra=="si":
         infoPregunta=mostrar_pregunta("EXTRA")
         validez=verificar_respuesta(infoPregunta)
-        agregar_puntaje(dificultad, validez)
+        puntaje=agregar_puntaje("EXTRA", validez, puntaje)
 
     print(f"\n Muy bien {nombre}")
     print(f"Obtuviste un total de {puntaje} puntos")
