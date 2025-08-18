@@ -15,6 +15,7 @@ def mostrar_pregunta(dificultad):
         print(f"{i}. {opciones[i-1]}")
     return respuesta
 
+#Función para verificar la respuesta
 def verificar_respuesta(infoPregunta):
     respuesta_usuario=input("Tu respuesta en números: ")
     respuesta_usuario=int(respuesta_usuario)
@@ -25,3 +26,15 @@ def verificar_respuesta(infoPregunta):
             return False
     else:
         print ("La respuesta debe ser un número entre 1 y 4")
+
+#función para agregar puntaje
+def agregar_puntaje(dificultad, validez):
+    if validez:
+        if dificultad=="FÁCIL":
+            puntaje+=1
+        elif dificultad=="MEDIA":
+            puntaje+=2
+        elif dificultad=="DIFÍCIL":
+            puntaje+=3
+        elif dificultad=="EXTRA":
+            puntaje+=2
