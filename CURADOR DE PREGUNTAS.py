@@ -130,7 +130,7 @@ def agregar_preguntas():
         else:
             break
     
-    question = {pregunta:{'Respuesta':respuesta, 'Opciones':opciones}}
+    question = {'Pregunta':pregunta, 'Respuesta':respuesta, 'Opciones':opciones}
     for tipo in preguntas:
         if dificultad in tipo:
             tipo[dificultad].append(question)
