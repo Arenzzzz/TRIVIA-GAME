@@ -78,7 +78,7 @@ def jugar():
         validez=verificar_respuesta(infoPregunta)
         puntaje=agregar_puntaje("EXTRAS", validez, puntaje)
 
-    print(f"\n Muy bien {nombre}")
+    print(f"\n-Muy bien {nombre}")
     print(f"Obtuviste un total de {puntaje} puntos")
 
     #guardar datos
