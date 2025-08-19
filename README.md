@@ -89,9 +89,6 @@ El trabajo se organizó con roles de equipo para fomentar la colaboración, el u
 * Creación del **menú principal**, permitiendo a los jugadores elegir entre jugar, ver puntajes, agregar preguntas o salir del programa.
 * Integración con los módulos de **preguntas** y **resultados**, asegurando que las preguntas y los puntajes se gestionen correctamente.
 
-
----
-
 **Gestor de documentación**
 **Carlos Andrés Cholotio Mendoza – 1517925**
 
@@ -105,7 +102,6 @@ El trabajo se organizó con roles de equipo para fomentar la colaboración, el u
 * Se asegura de que todos los commits tengan mensajes claros.
 * Sube documentación extra (diagramas, imágenes, ejemplos).
 
----
 
 ## Problemas encontrados y soluciones
 
