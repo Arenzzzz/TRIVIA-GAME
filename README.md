@@ -100,7 +100,6 @@ El trabajo se organizó con roles de equipo para fomentar la colaboración, el u
   * Roles de los integrantes
   * Problemas encontrados y soluciones
 * Se asegura de que todos los commits tengan mensajes claros.
-* Sube documentación extra (diagramas, imágenes, ejemplos).
 
 
 ## Problemas encontrados y soluciones
