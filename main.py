@@ -1,14 +1,14 @@
 #Flujo general del programa
 #A cargo de Luis Manuel carnet 1502325
 
-import preguntas   #Base de datos de preguntas
+import preguntas   #Banco de preguntas
 import random
 import resultados       #Base de datos para el historial de puntajes
 
 #Función para mostrar una pregunta con sus opciones de forma aleatoria, guiandose por la dificultad
 def mostrar_pregunta(dificultad):
-    InfoPregunta=preguntas.preguntas[dificultad][random.randint(0,(len(preguntas.preguntas[dificultad])-1))]
-    pregunta=InfoPregunta['Pregunta']
+    InfoPregunta=preguntas.preguntas[dificultad][random.randint(0,(len(preguntas.preguntas[dificultad])-1))]        #Extraer pregunta del banco de preguntas
+    pregunta=InfoPregunta['Pregunta']    #Dividirla en pregunta, ocpiones y respuesta para su uso
     opciones=InfoPregunta['Opciones']
     respuesta=InfoPregunta["Respuesta"]
     print(pregunta)
@@ -19,17 +19,17 @@ def mostrar_pregunta(dificultad):
 #Función para verificar la respuesta
 def verificar_respuesta(infoPregunta):
     comprobacion=False
-    while comprobacion==False:
+    while comprobacion==False:   #Ciclo for hasta ingresar pregunta válida 
         respuesta_usuario=input("Tu respuesta en números: ")
-        try:
+        try:    #Comrpobar si es respuesta válida
             respuesta_usuario=int(respuesta_usuario)
             if 1<=respuesta_usuario<=4:
-                if infoPregunta["Respuesta"]==infoPregunta["Opciones"][respuesta_usuario-1]:
-                    comprobacion=True
-                    return True
+                if infoPregunta["Respuesta"]==infoPregunta["Opciones"][respuesta_usuario-1]:    #Comprobar si es la respuesta correcta
+                    comprobacion=True    #Terminar el bucle
+                    return True            #retornar la validez de la respuesta
                 else:
-                    comprobacion=True
-                    return False
+                    comprobacion=True    #Terminar el bucle
+                    return False        #Retornar la validez de la respuesta
             else:
                 raise ValueError ("La respuesta debe ser un número entre 1 y 4")
         except ValueError as e:
@@ -55,12 +55,14 @@ def jugar():
     print("¿Preparado para este reto?")
     nombre=input("Primero, dinos tu nombre: ").strip().title()
     puntaje=0
-    while nombre=="":
+    while nombre=="":    #Comprobación nombre
         print("No trates de hacer trampa, ingresa un nombre válido")
         nombre=input("Ingresa tu nombre: ").strip().title()
     print(f"\nAhora sí, demuestra lo que sabes {nombre}")
     
     dificultades=["FÁCIL", "MEDIA", "DIFÍCIL"]
+
+    #Ciclo for para pasar una pregunta de cada tipo
     for dificultad in dificultades:
         print(f"\nSe viene una pregunta {dificultad.lower()}")
         infoPregunta=mostrar_pregunta(dificultad)
@@ -71,6 +73,7 @@ def jugar():
     print("Responde una pregunta extra por 2 puntos más, pero si te equivocas pierdes 3 puntos")
     pregunta_extra=input("¿Deseas la pregunta? escribe 'si' para darte la pregunta o un enter para terminar: ")
     if pregunta_extra=="si":
+        print("\nSe viene una pregunta extra, aquí se define todo")
         infoPregunta=mostrar_pregunta("EXTRAS")
         validez=verificar_respuesta(infoPregunta)
         puntaje=agregar_puntaje("EXTRAS", validez, puntaje)
@@ -106,4 +109,4 @@ while True:
         print("Sigue aprendiendo...")
         break
     else:
-        print("Opción no válida")
+        print("Opción no válida")
