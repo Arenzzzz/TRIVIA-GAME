@@ -90,6 +90,37 @@ El trabajo se organizó con roles de equipo para fomentar la colaboración, el u
 * Integración con los módulos de **preguntas** y **resultados**, asegurando que las preguntas y los puntajes se gestionen correctamente.
 
 
+## Problemas encontrados y soluciones
+
+**Problema 1: Variable `puntaje` usada en diferentes funciones**
+
+* El puntaje estaba definido de forma local en una función y se intentaba usar en otra, provocando errores de alcance.
+  **Solución:** Se modificó la función para que recibiera el puntaje como parámetro y retornara el valor actualizado.
+
+---
+
+**Problema 2: Importación incorrecta del módulo de preguntas**
+
+* El archivo del curador de preguntas tenía espacios en el nombre (`CURADOR-DE-PREGUNTAS`), lo que ocasionaba errores al realizar el `import`.
+  **Solución:** Se renombró el archivo siguiendo la convención de Python (por ejemplo, `curador_preguntas.py`) para permitir la importación sin errores.
+
+---
+
+**Problema 3: Retorno incorrecto en la función `mostrar_pregunta()`**
+
+* La función estaba retornando únicamente la **respuesta correcta**, cuando lo necesario era retornar toda la información de la pregunta.
+* Esto causaba que al usar `infoPregunta` se trabajara con un string en lugar de un objeto/diccionario con todos los datos.
+  **Solución:** Se ajustó el retorno de la función para enviar el diccionario completo de la pregunta y así garantizar que otras funciones lo procesaran correctamente.
+
+---
+
+**Problema 4: Inconsistencia en el nombre de la dificultad “DÍFICIL”**
+
+* En la función `jugar()` se escribió `"DÍFICIL"` en lugar de `"DIFÍCIL"`.
+* Esto impedía acceder correctamente a las preguntas de esa dificultad y afectaba el cálculo del puntaje.
+  **Solución:** Se unificó la nomenclatura en todo el proyecto, asegurando que la dificultad se llamara siempre `"DIFÍCIL"`.
+
+---
 
 
 ## Conclusión
