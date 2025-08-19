@@ -90,6 +90,23 @@ El trabajo se organizó con roles de equipo para fomentar la colaboración, el u
 * Integración con los módulos de **preguntas** y **resultados**, asegurando que las preguntas y los puntajes se gestionen correctamente.
 
 
+---
+
+**Gestor de documentación**
+**Carlos Andrés Cholotio Mendoza – 1517925**
+
+* Mantiene actualizado el repositorio en GitHub.
+* Redacta el archivo `README.md` con:
+
+  * Descripción del proyecto
+  * Instrucciones de uso
+  * Roles de los integrantes
+  * Problemas encontrados y soluciones
+* Se asegura de que todos los commits tengan mensajes claros.
+* Sube documentación extra (diagramas, imágenes, ejemplos).
+
+---
+
 ## Problemas encontrados y soluciones
 
 **Problema 1: Variable `puntaje` usada en diferentes funciones**
