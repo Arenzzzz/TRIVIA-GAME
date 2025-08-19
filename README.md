@@ -123,10 +123,14 @@ El trabajo se organizó con roles de equipo para fomentar la colaboración, el u
 ---
 
 
-## Conclusión
+## Conclusión del Proyecto
 
-Este proyecto cumple con los requisitos de un juego funcional de trivia y fomenta:
-* Trabajo colaborativo.
-* Uso correcto de GitHub (commits, ramas, issues, documentación).
-* Aplicación de estructuras de programación en Python (condicionales, ciclos, manejo de excepciones).
+El desarrollo de esta trivia nos permitió aplicar de forma práctica conceptos de **programación en Python**, como estructuras de control, modularidad, manejo de errores y trabajo colaborativo. Cada integrante asumió un rol específico, lo que facilitó la construcción del programa y simuló un entorno real de desarrollo en equipo.
+
+El proyecto cumplió sus objetivos: crear un juego interactivo, escalable y estable, con validaciones adecuadas y un sistema de puntajes funcional. Durante el proceso aprendimos la importancia de la consistencia en el código y la correcta integración de módulos.
+
+En conclusión, este trabajo no solo nos permitió obtener un producto funcional, sino también fortalecer nuestras habilidades de programación y colaboración, dejando abierta la posibilidad de futuras mejoras como una interfaz gráfica o nuevas categorías de preguntas.
+
+
+
 
